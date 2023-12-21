@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Budget App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <!-- bootstrap cdn link  -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css" />
+    <!-- custom css file link  -->
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <style type="text/css">
+   .text{
+     font-weight: bold;
+   }
+ </style>
+</head>
+
+<body>
+    <div class="container-fluid" id="budget">
+        <div id="landing-page">
+            <header id="header">
+                <nav class="navbar navbar-expand-sm navbar-light">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu">
+                        <i><span class="fas-far-bars"></span></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarMenu">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#home">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#about">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#budgetApp">Budget</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#budgetTips">Budget Tips</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="#" class="navbar-brand" id="websiteName">BUDGETING</a></i>
+                </nav>
+            </header>
+
+            <div id="homeTitle" class="container-fluid">
+                <h1>Если следить за бюджетом для вас проблема...</h1>
+                <h2>Вы пришли по адресу</h2>
+                <h3>Всего пару кликов!</span></h3>
+                <a href="#budgetApp"><button>Начать!</button></a>
+            </div>
+        </div>
+
+        <div id="about">
+            <h2>О нас</h2>
+            <p>Вы покупатель, только что закончивший среднюю школу или студент колледжа? У вас нулевые
+                навыки управления и финансового планирования? , боитесь за свои бабосики?
+                Не волнуйтесь, мы здесь что бы помочь вам.</p>
+            <p>Это веб-приложение, созданное студентами для людей, которые имею доход. Он создан, чтобы помочь вам отслеживать ваши
+                личные финансы и дать вам общую картину того, что вы тратите. Несмотря на то, что он создан, чтобы помочь.</p>
+
+            <div class="row" id="icons">
+                <div class="col-md-4 services">
+                    <i class="fas fa-hands-helping"></i>
+                    <p>Наставничество</p>
+                </div>
+                <div class="col-md-4 services">
+                    <i class="fas fa-balance-scale"></i>
+                    <p>Бюджетирование</p>
+                </div>
+                <div class="col-md-4 services">
+                    <i class="fas fa-hand-holding-usd"></i>
+                    <p>Финансовые менджмент</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="budgetApp">
+            <h2 class="text-uppercase mb-4 text-center"><b>Аналитика вашего бюджета</b></h2>
+            <div class="row">
+                <div class="col-11 mx-auto pt-3">
+                    <!-- title -->
+
+                    <div class="row">
+                        <div class="col-md-5 my-3">
+                            <!-- budget feedback -->
+                            <div class="budget-feedback alert alert-danger text-capitalize"><b>Бюджет</b> 
+                            </div>
+                            <!-- budget form -->
+                            <form id="budget-form" class=" budget-form">
+                                <h5 class="text-capitalize">Пожалуйста введите ваш бюджет: </h5>
+                                <div class="form-group">
+                                    <input type="number" class="form-control budget-input text" id="budget-input">
+                                </div>
+                                <!-- submit button -->
+                                <button type="submit" class="btn text-capitalize budget-submit btn-danger"
+                                    id="budget-submit">Добавить</button>
+                            </form>
+                        </div>
+                        <div class="col-md-7">
+                            <!-- app info -->
+                            <div class="row my-3">
+                                <div class="col-4 text-center mb-2">
+                                    <h6 class="text-uppercase info-title">Бюджет</h6>
+                                    <span class="budget-icon"><i class="fas fa-money-bill-alt"></i></span>
+                                    <h4 class="text-uppercase mt-2 budget" id="budget"><span>KZT </span><span
+                                            id="budget-amount">0</span></h4>
+                                </div>
+                                <div class="col-4 text-center">
+                                    <h6 class="text-uppercase info-title">Расходы</h6>
+                                    <span class="expense-icon"><i class="far fa-credit-card"></i></span>
+                                    <h4 class="text-uppercase mt-2 expense" id="expense"><span>KZT </span><span
+                                            id="expense-amount">0</span></h4>
+                                </div>
+                                <div class="col-4 text-center">
+                                    <h6 class="text-uppercase info-title">Баланс</h6>
+                                    <span class="balance-icon"><i class="fas fa-balance-scale"></i></span>
+                                    <h4 class="text-uppercase mt-2 balance" id="balance"> <span>KZT </span><span
+                                            id="balance-amount">0</span></h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-5 my-3">
+                            <!-- expense feedback -->
+                            <div class="expense-feedback alert alert-danger text-capitalize"> <b> Расходы</b>
+                                </div>
+                            <!-- expense form -->
+                            <form id="expense-form" class=" expense-form">
+                                <h5 class="text-capitalize">На что было потраченно?</h5>
+                                <div class="form-group">
+                                    <input type="text" class="form-control expense-input text" id="expense-input">
+                                </div>
+                                <h5 class="text-capitalize">Сумма затрат: </h5>
+                                <div class="form-group">
+                                    <input type="number" class="form-control expense-input text" id="amount-input">
+                                </div>
+                                <!-- submit button -->
+                                <button type="submit" class="btn text-capitalize expense-submit btn-danger"
+                                    id="expense-submit">Добавить расходы</button>
+                            </form>
+                        </div>
+
+
+                        <div class="col-md-7 my-3">
+                            <!-- expense list -->
+                            <div class="expense-list" id="expense-list">
+
+                                <div class="expense-list__info d-flex justify-content-between text-capitalize">
+                                    <h5 class="list-item">Куплено</h5>
+                                    <h5 class="list-item">Расходы</h5>
+                                    <h5 class="list-item">Действие</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="budgetTips">
+            <h2>Советы от нас</h2>
+            <div class="row">
+                <div class="col-xl-3 mb-2">
+                    <a href="https://www.moneyunder30.com/how-to-invest" target=" ">
+                        <div class="card mx-auto" style="width:20rem">
+                            <div class="text-box">
+                                <div class="image-box">
+                                    <img src="./images/coin-wooden-table1.jpg" alt="" />
+                                </div>
+                                <div class="text-container">
+                                    <h6>Заставьте расти своие деньги!</h6>
+                                    <p>Если после услышанного вы подумаете об инвестициях, то это не так. В первую очередь нужно подумать о своих рассходах!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="col-xl-3 mb-2">
+                    <a href="https://www.debt.org/students/college-budgeting-101/" target=" ">
+                        <div class="card mx-auto" style="width:20rem">
+                            <div class="text-box">
+                                <div class="image-box">
+                                    <img src="./images/pexels6.jpg" alt="" />
+                                </div>
+                                <div class="text-container">
+                                    <h6>Совет студентам! </h6>
+                                    <p>Студенческая жизнь- это этап где человек вступает во взрослую жизнь, и что бы не влезать в долги, кредиты. Он должен контролировать свой бюджет!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xl-3 mb-2">
+                    <a href="http://www.dustinwheelercpa.com/2010/06/29/the-importance-of-accountability-in-a-personal-budget/"
+                        target=" ">
+                        <div class="card mx-auto" style="width:20rem">
+                            <div class="text-box">
+                                <div class="image-box">
+                                    <img src="./images/pexels4.jpg" alt="" />
+                                </div>
+
+                                <div class="text-container">
+                                    <h6>Финансовая отчетность</h6>
+                                    <p> Составляйте финансовые отчеты регулярно, чтобы иметь актуальную информацию о финансовом положении вашего бюджета.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xl-3 mb-2">
+                    <a href="https://financialflamingo.com/how-budgeting-changed-my-life/" target=" ">
+                        <div class="card mx-auto" style="width:20rem">
+                            <div class="text-box">
+                                <div class="image-box">
+                                    <img src="./images/pexels1.jpg" alt="" />
+                                </div>
+
+                                <div class="text-container">
+                                    <h6>Это сделает вас счастливым!</h6>
+                                    <p> В бюджете важно учесть не только обязательные расходы, но и развлечения. Найдите баланс, чтобы ваши финансы приносили удовлетворение, не ставя под угрозу ваш общий бюджет.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="footer">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>Навигация</h5>
+                    <ul>
+                        <li>
+                            <a href="#home">Home</a>
+                        </li>
+                        <li>
+                            <a href="#about">About</a>
+                        </li>
+                        <li>
+                            <a href="#budgetApp">Budget</a>
+                        </li>
+                        <li>
+                            <a href="#budgetTips">Budget Tips</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Наш сервис</h5>
+                    <ul>
+                        <li>Наставничество</li>
+                        <li>Приложение для составления бюджета</li>
+                        <li>Финансовый менеджмент</li>
+                        <li>Советы от нас</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3" id="share">
+                    <h5>Find us on:</h5>
+                    <ul>
+                        <li>
+                            <a href="https://www.facebook.com/profile.php?id=100034862615456" target="blank">
+                                <i class="fab fa-facebook-square"></i>Facebook
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://twitter.com/powerforlux" target="blank">
+                                <i class="fab fa-twitter-square"></i>Twitter
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.instagram.com/ozkch_//" target="blank">
+                                <i class="fab fa-instagram-square"></i>Instagram
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+               <!-- <div class="col-md-3">
+                    <h5>Подписывайтесь на нашу новостную рассылку</h5>
+                    <form action="" id="newsletter">
+                        <input type="email" placeholder="enter your email" id="email" required>
+                        <button type="submit" class="fas fa-paper-plane" id="newsLetter"></button>
+                    </form>
+                </div> -->
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+
+</body>
+
+</html>
